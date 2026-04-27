@@ -1,0 +1,141 @@
+.section {
+  position: relative;
+  padding: 7rem 2rem;
+  overflow: hidden;
+  background: var(--verde-oscuro);
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 0% 50%, rgba(21, 112, 198, 0.4) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(201, 168, 76, 0.06) 0%, transparent 60%);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dorado);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--crema);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.title em {
+  font-style: italic;
+  color: var(--dorado-claro);
+}
+
+.sub {
+  font-size: 1rem;
+  color: rgba(250, 246, 237, 0.6);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(250, 246, 237, 0.04);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent, #c9a84c), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.card:hover {
+  background: rgba(250, 246, 237, 0.08);
+  border-color: rgba(201, 168, 76, 0.4);
+  transform: translateY(-4px);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.cardEmoji {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.cardTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--crema);
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  color: rgba(250, 246, 237, 0.65);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.cardBtn {
+  display: inline-flex;
+  align-items: center;
+  color: var(--dorado);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: gap 0.3s, color 0.3s;
+  margin-top: 0.5rem;
+}
+
+.cardBtn:hover {
+  color: var(--dorado-claro);
+  gap: 0.3rem;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

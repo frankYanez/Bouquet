@@ -1,0 +1,102 @@
+.section {
+  position: relative;
+  background: var(--verde-oscuro);
+  padding: 6rem 2rem;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 80% at 50% 50%, rgba(201, 168, 76, 0.07) 0%, transparent 70%),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(201, 168, 76, 0.02) 40px,
+      rgba(201, 168, 76, 0.02) 41px
+    );
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.text { flex: 1; min-width: 280px; }
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dorado);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--crema);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.title em { font-style: italic; color: var(--dorado-claro); }
+
+.sub {
+  font-size: 0.95rem;
+  color: rgba(250, 246, 237, 0.65);
+  line-height: 1.7;
+  max-width: 440px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.btnPrimary {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #25D366;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);
+}
+
+.btnPrimary:hover {
+  background: #1da851;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(37, 211, 102, 0.4);
+}
+
+.btnSecondary {
+  text-align: center;
+  color: rgba(250, 246, 237, 0.6);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.3s;
+  letter-spacing: 0.03em;
+}
+
+.btnSecondary:hover { color: var(--dorado-claro); }

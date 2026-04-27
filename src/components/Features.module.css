@@ -1,0 +1,120 @@
+.section {
+  background: var(--crema);
+  padding: 7rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--dorado), transparent);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dorado);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--verde-oscuro);
+  line-height: 1.2;
+}
+
+.title em {
+  font-style: italic;
+  color: var(--verde-claro);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(26, 46, 26, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--palette-1), var(--palette-2));
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: left;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(26, 46, 26, 0.12);
+  border-color: rgba(201, 168, 76, 0.2);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.iconWrap {
+  width: 56px;
+  height: 56px;
+  background: var(--verde-oscuro);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--dorado);
+}
+
+.iconWrap svg {
+  width: 26px;
+  height: 26px;
+}
+
+.cardTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--verde-oscuro);
+  margin-bottom: 0.75rem;
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  color: var(--gris-texto);
+  line-height: 1.7;
+  opacity: 0.85;
+}
