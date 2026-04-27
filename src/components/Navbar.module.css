@@ -160,16 +160,31 @@
     display: flex;
     position: fixed;
     inset: 0;
+    /* solid background so it never looks transparent on mobile */
     background: #192a3d;
+
+    /* make sure it truly covers the whole viewport */
+    width: 100vw;
+    height: 100vh;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2.5rem;
-    z-index: 999;
+
+    /* keep above everything */
+    z-index: 2000;
+
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transition: opacity 0.35s ease, visibility 0.35s ease;
+
+    /* avoid iOS/Safari weirdness with fixed + inset */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
   }
 
   .links.open {
