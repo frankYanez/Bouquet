@@ -6,7 +6,7 @@ const cats = [
     desc: 'Para todo tipo de uso. Ideal para velas, jabones, perfumes, colonias y más.',
     whatsapp: 'https://wa.link/dm6301',
     emoji: '🌿',
-    accent: '#2d4a2d',
+    accent: '#2872fa',
   },
   {
     title: 'Perfuminas concentradas',
@@ -20,7 +20,7 @@ const cats = [
     desc: 'Increíble rinde con los mejores aromas. Ideal para producción a escala.',
     whatsapp: 'https://wa.link/a08ad8',
     emoji: '🏠',
-    accent: '#3d6b3d',
+    accent: '#1559ed',
   },
 ]
 
