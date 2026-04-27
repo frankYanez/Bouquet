@@ -1,7 +1,6 @@
-import type { Metadata } from 'next'
 import './globals.css'
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Bouquet Esencias | Fábrica de esencias aromáticas — Tandil',
   description: 'Fábrica de esencias aromáticas con más de 30 años de experiencia. Esencias concentradas, perfuminas, desodorantes de piso y más. Envíos a todo el país.',
   keywords: 'esencias, perfuminas, desodorante de piso, fábrica de esencias, Tandil, aromas, fragancias, por mayor',
@@ -15,11 +14,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body>{children}</body>
